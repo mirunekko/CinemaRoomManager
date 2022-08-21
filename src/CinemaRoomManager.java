@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class cinemaRoomManager {
+public class CinemaRoomManager {
     final static Scanner scanner = new Scanner(System.in);
     private static char[][] room;
     private static int rows;
