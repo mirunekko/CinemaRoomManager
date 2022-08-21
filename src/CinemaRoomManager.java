@@ -9,12 +9,6 @@ public class CinemaRoomManager {
     private static float percentage = 0;
     private static int currentIncome = 0;
 
-    public static void main(String[] args) {
-        chooseRoom();
-        createRoom();
-        showMenu();
-    }
-
     private static int calculateIncome() {
         int totalSeats = rows * seats ;
         int firstHalf = rows  / 2 * seats;
