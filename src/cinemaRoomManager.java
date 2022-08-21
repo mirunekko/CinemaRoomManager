@@ -15,7 +15,7 @@ public class cinemaRoomManager {
         showMenu();
     }
 
-    public static int calculateIncome() {
+    private static int calculateIncome() {
         int totalSeats = rows * seats ;
         int firstHalf = rows  / 2 * seats;
         int secondHalf = (rows / 2 + rows  % 2) * seats;
@@ -52,17 +52,17 @@ public class cinemaRoomManager {
             }
         }
     }
-    public static void printRoom() {
+    private static void printRoom() {
         System.out.print("Cinema:" + "\n ");
-        for (char i = 0; i < room.length; i++) {
-            for (char j = 0; j < room[i].length; j++) {
-                System.out.print(room[i][j] + " ");
+        for (char [] i : room) {
+            for (char j : i) {
+                System.out.print(j + " ");
             }
             System.out.println();
         }
     }
 
-    public static void buyTicket() {
+    private static void buyTicket() {
         System.out.println("\nEnter a row number:");
         int clientRow = scanner.nextInt();
         System.out.println("Enter a seat number in that row:");
@@ -87,7 +87,7 @@ public class cinemaRoomManager {
         }
     }
 
-    public static void showStats() {
+    private static void showStats() {
         char percent = '%';
         System.out.printf("Number of purchased tickets: %d\n", countTicket);
         System.out.printf("Percentage: %.2f%c\n", percentage, percent);
@@ -95,7 +95,7 @@ public class cinemaRoomManager {
         System.out.printf("Total income: $%d\n", calculateIncome());
     }
 
-    static void showMenu() {
+    public static void showMenu() {
         System.out.println("1. Show the seats\n2. Buy a ticket" +
                 "\n3. Statistics\n0. Exit");
         int menu = scanner.nextInt();
